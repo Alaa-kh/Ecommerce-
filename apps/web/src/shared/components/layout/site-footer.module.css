@@ -1,0 +1,52 @@
+.footer {
+  border-top: 1px solid var(--color-border);
+  background:
+    linear-gradient(180deg, transparent, color-mix(in srgb, var(--color-surface-secondary) 70%, transparent)),
+    color-mix(in srgb, var(--color-surface) 92%, transparent);
+}
+
+.inner {
+  width: min(var(--layout-max-wide), calc(100% - (var(--layout-gutter) * 2)));
+  margin: 0 auto;
+  padding: var(--space-16) 0 var(--space-10);
+  display: grid;
+  gap: var(--space-6);
+}
+
+.brandBlock {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.links a {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.links a:hover {
+  color: var(--color-accent);
+}
+
+.copy {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--type-body-sm);
+}
+
+@media (min-width: 768px) {
+  .inner {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
+
+  .copy {
+    grid-column: 1 / -1;
+  }
+}

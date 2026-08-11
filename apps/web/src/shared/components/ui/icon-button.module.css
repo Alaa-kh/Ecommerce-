@@ -1,0 +1,108 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background-color var(--motion-fast) var(--motion-easing),
+    color var(--motion-fast) var(--motion-easing),
+    border-color var(--motion-fast) var(--motion-easing),
+    transform var(--motion-fast) var(--motion-easing),
+    box-shadow var(--motion-fast) var(--motion-easing);
+}
+
+.button:not(:disabled):hover {
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-surface-sunken) 80%, transparent);
+}
+
+.button:not(:disabled):active {
+  transform: scale(0.94);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.primary:not(:disabled):hover {
+  background: var(--color-accent-hover);
+  color: var(--color-text-inverse);
+}
+
+.secondary {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.ghost {
+  background: transparent;
+}
+
+.active {
+  color: var(--color-error);
+  animation: lumina-pulse-soft 1.8s var(--motion-easing) infinite;
+}
+
+.secondary.active {
+  border-color: color-mix(in srgb, var(--color-error) 45%, var(--color-border));
+  background: color-mix(in srgb, var(--color-error) 10%, var(--color-surface));
+}
+
+.active .icon :global(svg) {
+  fill: color-mix(in srgb, var(--color-error) 40%, transparent);
+  stroke: var(--color-error);
+}
+
+.sm {
+  width: 2rem;
+  height: 2rem;
+}
+
+.md {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.lg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.icon {
+  display: inline-flex;
+  transition: transform var(--motion-fast) var(--motion-easing);
+}
+
+.button:not(:disabled):hover .icon {
+  transform: scale(1.08);
+}
+
+.badge {
+  position: absolute;
+  top: 0.1rem;
+  inset-inline-end: 0.05rem;
+  min-width: 1.15rem;
+  height: 1.15rem;
+  padding: 0 0.28rem;
+  border-radius: var(--radius-full);
+  background: var(--color-error);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.15rem;
+  text-align: center;
+  animation: lumina-badge-pop var(--motion-normal) var(--motion-easing-emphasized) both;
+  box-shadow: 0 0 0 2px var(--color-surface);
+}

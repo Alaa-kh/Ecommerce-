@@ -1,0 +1,172 @@
+/* Shared motion utilities — respect prefers-reduced-motion via global.css */
+
+@keyframes lumina-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lumina-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lumina-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lumina-slide-in-inline {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes lumina-image-reveal {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lumina-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes lumina-pulse-soft {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes lumina-badge-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animPage {
+  animation: lumina-fade-up var(--motion-slow) var(--motion-easing-emphasized) both;
+}
+
+.animPanel {
+  animation: lumina-scale-in var(--motion-normal) var(--motion-easing) both;
+}
+
+.animSidebar {
+  animation: lumina-slide-in-inline var(--motion-slow) var(--motion-easing-emphasized) both;
+}
+
+.animItem {
+  animation: lumina-fade-up var(--motion-normal) var(--motion-easing) both;
+}
+
+.animStagger > * {
+  animation: lumina-fade-up var(--motion-slow) var(--motion-easing-emphasized) both;
+}
+
+.animStagger > *:nth-child(1) {
+  animation-delay: 40ms;
+}
+.animStagger > *:nth-child(2) {
+  animation-delay: 80ms;
+}
+.animStagger > *:nth-child(3) {
+  animation-delay: 120ms;
+}
+.animStagger > *:nth-child(4) {
+  animation-delay: 160ms;
+}
+.animStagger > *:nth-child(5) {
+  animation-delay: 200ms;
+}
+.animStagger > *:nth-child(6) {
+  animation-delay: 240ms;
+}
+.animStagger > *:nth-child(7) {
+  animation-delay: 280ms;
+}
+.animStagger > *:nth-child(8) {
+  animation-delay: 320ms;
+}
+.animStagger > *:nth-child(9) {
+  animation-delay: 360ms;
+}
+.animStagger > *:nth-child(10) {
+  animation-delay: 400ms;
+}
+.animStagger > *:nth-child(11) {
+  animation-delay: 440ms;
+}
+.animStagger > *:nth-child(12) {
+  animation-delay: 480ms;
+}
+
+.animStagger > *:nth-child(n + 13) {
+  animation-delay: 520ms;
+}
+
+.fieldPulse {
+  transition:
+    border-color var(--motion-fast) var(--motion-easing),
+    box-shadow var(--motion-fast) var(--motion-easing),
+    transform var(--motion-fast) var(--motion-easing);
+}
+
+.fieldPulse:focus-within {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+[dir='rtl'] .animSidebar {
+  animation-name: lumina-slide-in-inline-rtl;
+}
+
+@keyframes lumina-slide-in-inline-rtl {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

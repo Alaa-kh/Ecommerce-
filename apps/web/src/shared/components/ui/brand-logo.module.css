@@ -1,0 +1,85 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.mark {
+  flex: 0 0 auto;
+  display: block;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.markBg {
+  fill: var(--color-primary);
+}
+
+html[data-theme='dark'] .markBg {
+  fill: #0a0a0b;
+  stroke: color-mix(in srgb, var(--color-border) 80%, transparent);
+}
+
+.markStroke {
+  stroke: #ff8a66;
+  fill: none;
+}
+
+.markDot {
+  fill: var(--color-accent);
+}
+
+.sm .mark {
+  width: 1.85rem;
+  height: 1.85rem;
+}
+
+.md .mark {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.lg .mark {
+  width: 3rem;
+  height: 3rem;
+}
+
+.wordmark {
+  display: grid;
+  min-width: 0;
+}
+
+.wordmark strong {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.sm .wordmark strong {
+  font-size: 1rem;
+}
+
+.lg .wordmark strong {
+  font-size: 1.4rem;
+}
+
+.wordmark small {
+  color: var(--color-text-subtle, var(--color-text-muted));
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 15rem;
+}
+
+@media (min-width: 768px) {
+  .wordmark small {
+    max-width: 20rem;
+  }
+}

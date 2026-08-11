@@ -1,0 +1,28 @@
+{
+  "name": "ecommerce-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lumina Market — premium ecommerce storefront powered by Platzi Fake Store API",
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=web",
+    "dev:web": "npm run dev --workspace=web",
+    "build": "npm run build --workspace=web",
+    "build:web": "npm run build --workspace=web",
+    "lint": "npm run lint --workspace=web",
+    "lint:web": "npm run lint --workspace=web",
+    "typecheck": "npm run typecheck --workspace=web",
+    "test": "npm run test --workspace=web",
+    "format": "prettier --write \"apps/web/**/*.{ts,tsx,js,jsx,json,md,yml,yaml,css}\"",
+    "format:check": "prettier --check \"apps/web/**/*.{ts,tsx,js,jsx,json,md,yml,yaml,css}\""
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}

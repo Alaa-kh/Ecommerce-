@@ -1,0 +1,71 @@
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity var(--motion-slow) var(--motion-easing),
+    transform var(--motion-slow) var(--motion-easing);
+}
+
+.loading {
+  opacity: 0;
+}
+
+.loaded,
+.reveal {
+  opacity: 1;
+  transform: scale(1);
+  animation: lumina-image-reveal var(--motion-slow) var(--motion-easing-emphasized) both;
+}
+
+.fallback {
+  position: relative;
+  display: grid;
+  place-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  height: 100%;
+  min-height: 8rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 28% 18%, color-mix(in srgb, var(--color-accent) 28%, transparent), transparent 52%),
+    linear-gradient(145deg, var(--color-surface-tertiary), var(--color-surface-sunken));
+  color: var(--color-text-tertiary);
+}
+
+.pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-border) 70%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 70%, transparent) 1px, transparent 1px);
+  background-size: 1.25rem 1.25rem;
+  pointer-events: none;
+}
+
+.mark {
+  position: relative;
+  z-index: 1;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.65rem;
+  background: var(--gradient-brand);
+  box-shadow: var(--shadow-sm);
+  margin-inline: auto;
+  animation: lumina-pulse-soft 2.4s var(--motion-easing) infinite;
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  font-size: var(--type-caption);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-text-secondary);
+}

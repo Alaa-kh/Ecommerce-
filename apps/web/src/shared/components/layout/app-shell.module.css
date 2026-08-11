@@ -1,0 +1,21 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.main {
+  width: min(var(--layout-max-wide), calc(100% - (var(--layout-gutter) * 2)));
+  margin: 0 auto;
+  padding: var(--space-8) 0 var(--space-16);
+  animation: fadeIn var(--motion-normal) var(--motion-easing);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
