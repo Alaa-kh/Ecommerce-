@@ -1,0 +1,1 @@
+import{g as e,i as t}from"./state-panel-BGh5SaH0.js";function n(){let n=e(),r=t(e=>e.app.auth.isAuthenticated);function i(e){if(r)return!0;let t=e??`${window.location.pathname}${window.location.search}`;return n(`/login?redirect=${encodeURIComponent(t)}`),!1}return{isAuthenticated:r,requireAuth:i}}export{n as t};

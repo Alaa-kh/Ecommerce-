@@ -1,0 +1,1 @@
+function e(e){return e.isLoading||e.isFetching&&e.isPlaceholderData}export{e as t};

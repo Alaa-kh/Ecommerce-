@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Ecommerce-/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lumina Market — production-ready ecommerce platform" />
+    <meta name="theme-color" content="#0A0A0B" />
+    <title>Lumina Market</title>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+          if (stored === 'system' || !stored) {
+            localStorage.setItem('theme', theme);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/Ecommerce-/assets/index-Br1Y85DY.js"></script>
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/errors-goQPRF7t.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/platzi-client-DLQ0mEcF.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/state-panel-BGh5SaH0.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/react-dom-B6UeQNyt.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/skeleton-D41_PBf_.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/redux-toolkit.modern-Cneu-EUt.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/app-slice-DsrKK7n6.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/wishlist-slice-DkE4EnHM.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/cart-slice-5JfoXRi3.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/orders-slice-DeIFQAWE.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/productsApi-C1iAWGnz.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/product-image-DkXx29_y.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/icons-BBOVqYi2.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/money-By8ynr8v.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/icon-button-DIFWZPWB.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/field-Dfi51MhV.js">
+    <link rel="modulepreload" crossorigin href="/Ecommerce-/assets/use-require-auth-R2ieHsJT.js">
+    <link rel="stylesheet" crossorigin href="/Ecommerce-/assets/state-panel-_f5E781r.css">
+    <link rel="stylesheet" crossorigin href="/Ecommerce-/assets/skeleton-zvhr46f3.css">
+    <link rel="stylesheet" crossorigin href="/Ecommerce-/assets/product-image-LPLXmw4_.css">
+    <link rel="stylesheet" crossorigin href="/Ecommerce-/assets/icon-button-DYdnNOuh.css">
+    <link rel="stylesheet" crossorigin href="/Ecommerce-/assets/field-Per0yQVC.css">
+    <link rel="stylesheet" crossorigin href="/Ecommerce-/assets/index-BmZVWccv.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
