@@ -24,7 +24,7 @@ export function AppProviders({ children }: AppProvidersProps) {
   return (
     <ReduxProvider store={store}>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
           <ThemeProvider>{children}</ThemeProvider>
         </BrowserRouter>
       </QueryClientProvider>

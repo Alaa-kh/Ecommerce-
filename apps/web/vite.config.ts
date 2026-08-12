@@ -5,7 +5,11 @@ import { fileURLToPath } from 'node:url';
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
+/** GitHub Pages project site: https://alaa-kh.github.io/Ecommerce-/ */
+const pagesBase = process.env.GITHUB_PAGES === 'true' ? '/Ecommerce-/' : '/';
+
 export default defineConfig({
+  base: pagesBase,
   plugins: [react()],
   resolve: {
     alias: {

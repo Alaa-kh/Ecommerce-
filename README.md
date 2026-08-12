@@ -2,7 +2,8 @@
 
 Premium ecommerce storefront built with React, TypeScript, and Vite.
 
-**Status:** finish project
+**Status:** finish project  
+**Live:** https://alaa-kh.github.io/Ecommerce-/
 
 Live product catalog from the [Platzi Fake Store API](https://fakeapi.platzi.com/).
 
